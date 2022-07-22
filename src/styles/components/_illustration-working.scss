@@ -1,0 +1,52 @@
+@import '../base/var';
+
+.main {
+  overflow: hidden;
+}
+
+.illustration-working {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 200px;
+  padding-inline: 20px;
+
+  .details {
+    margin: auto;
+
+    h1 {
+      font-size: clamp(3rem, 3.3vw, 4vw);
+      color: $Very-Dark-Violet;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+  }
+
+  .illustration-img {
+    position: relative;
+    right: -30%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1000px) {
+  .illustration-working {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    .details {
+      text-align: center;
+      margin-top: 30px;
+
+      h1 {
+        font-size: 30px;
+      }
+    }
+
+    .illustration-img {
+      width: 500px;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@import '../base/var';
+
+.header {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  color: $Grayish-Violet;
+  font-weight: 700;
+
+  .nav-links-desktop {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    
+    li {
+      margin-left: 40px;
+      cursor: pointer;
+
+      &:hover {
+        color: $Very-Dark-Violet;
+      }
+    }
+  }
+
+  .desktop.btns {
+    margin-left: auto;
+
+    .login-btn {
+      margin-right: 20px;
+      color: inherit;
+      font-size: 18px;
+      font-weight: inherit;
+      border: none;
+      background-color: white;
+      cursor: pointer;
+
+      &:hover {
+        color: $Very-Dark-Violet;
+      }
+    }
+    .signup {
+      width: 130px;
+      cursor: pointer;
+    }
+  }
+}
+
+
+@media (max-width: 800px) {
+  .header-icon {
+    margin-left: auto;
+    cursor: pointer;
+  }
+  .list {
+    display: none;
+  }
+  .list:hover,
+  .header-icon:hover + .list {
+    display: flex;
+    position: absolute;
+    z-index: 10000;
+    flex-direction: column;
+    width: calc(100vw - 10%);
+    top: 100%;
+    right: 5%;
+    background-color: $Very-Dark-Blue;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    padding: 30px;
+
+    & *:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    menu {
+      border-bottom: 1px solid $Grayish-Violet;
+      list-style: none;
+      
+      li {
+        margin-bottom: 20px;
+      }
+    }
+
+    .btns {
+      display: flex;
+      flex-direction: column;
+
+      .login-btn {
+        border: none;
+        color: white;
+        font-weight: 700;
+        font-size: inherit;
+        background-color: transparent;
+      }
+    }
+  }
+  .signup {
+    width: 80%;
+    align-self: center;
+  }
+}

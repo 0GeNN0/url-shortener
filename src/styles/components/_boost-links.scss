@@ -1,0 +1,14 @@
+@import '../base/var';
+
+.boost-links {
+  padding: 30px;
+  text-align: center;
+  background-image: url(../../../public/images/bg-boost-desktop.svg);
+  background-size: cover;
+  background-color: $Dark-Violet;
+  color: white;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,51 @@
+@import './var.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(#000000, .2);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+menu {
+  list-style: none;
+}
+
+.btn {
+  background-color: $Cyan;
+  border: none;
+  width: 170px;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($Cyan, $amount: 20%);
+  }
+}
+
+p {
+  color: $Grayish-Violet;
+  line-height: 1.7;
+}

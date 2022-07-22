@@ -1,0 +1,54 @@
+@import '../base/var';
+
+.shorten-it {
+  position: relative;
+  top: -82px;
+}
+
+.shorten-input {
+  background-image: url('../../../public/images/bg-shorten-desktop.svg');
+  background-size: cover;
+  background-color: $Dark-Violet;
+  padding: 50px;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+
+  input {
+    flex-grow: 1;
+    padding: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+
+    &.error {
+      border: 3px solid $Red;
+    }
+  }
+
+  .shorten {
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  p.error {
+    position: absolute;
+    top: 125px;
+    color: $Red;
+    font-style: italic;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 610px) {
+  .shorten-input {
+    flex-direction: column;
+    top: 115px;
+
+    .shorten {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+}

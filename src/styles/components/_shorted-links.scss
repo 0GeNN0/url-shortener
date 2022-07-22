@@ -1,0 +1,70 @@
+@import '../base/var';
+
+.single-shorted-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  margin-block: 20px;
+  padding: 15px;
+  border-radius: 5px;
+
+  .full-link {
+    color: $Very-Dark-Violet;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .to-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .shorted-link {
+    color: $Cyan;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .copy {
+    margin-left: 20px;
+    border-radius: 5px;
+    width: 120px;
+  }
+
+  .copied {
+    background-color: $Very-Dark-Violet;
+  }
+}
+
+@media (max-width: 650px) {
+  .single-shorted-link {
+    flex-direction: column;
+    padding: 0;
+
+    .full-link {
+      border-bottom: 1px solid $Dark-Violet;
+      padding: 20px;
+      width: 100%;
+    }
+
+    .to-right {
+      flex-direction: column;
+      padding: 20px;
+      width: 100%;
+    }
+
+    .shorted-link {
+      padding: 10px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .copy {
+      width: 100%;
+      margin: auto;
+    }
+  }
+}
